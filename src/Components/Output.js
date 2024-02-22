@@ -11,6 +11,7 @@ export default function Output(props) {
     }, [props.i]);
   
     const handleDone = () => {
+      OutArray[0]=0;
       console.log(OutArray);
     };
   return (
