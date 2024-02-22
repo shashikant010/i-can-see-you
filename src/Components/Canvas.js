@@ -3,8 +3,7 @@ import Boxes from './Boxes';// Import the CSS file
 import Output from './Output';
 
 export default function Canvas() {
-  const rows = 28; // number of rows
-  const cols = 28; 
+  const rows = 784; // number of rows
   const [seei,setseei]=useState(0)// number of columns
 
   const handleboxclick = (id) => {
@@ -12,8 +11,7 @@ export default function Canvas() {
   };
 
   const boxes = Array.from({length: rows}, (_, i) => 
-    Array.from({length: cols}, (_, j) =>
-    <Boxes key={`${i}-${j}`} id={`${i}-${j}`} onBoxClick={handleboxclick} />)
+    <Boxes key={i} id={i} onBoxClick={handleboxclick} />
   );
   
   
